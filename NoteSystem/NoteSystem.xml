@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NoteSystem</name>
+    </assembly>
+    <members>
+        <member name="P:NoteSystem.Contexts.MyUserContext.MyUser">
+            <summary>
+            用户EF
+            </summary>
+        </member>
+        <member name="M:NoteSystem.Contexts.MyUserContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{NoteSystem.Contexts.MyUserContext})">
+            <summary>
+            自动注入连接字符串
+            </summary>
+            <param name="options"></param>
+        </member>
+        <member name="T:NoteSystem.Controllers.MyUserController">
+            <summary>
+            用户信息
+            </summary>
+        </member>
+        <member name="F:NoteSystem.Controllers.MyUserController.userContext">
+            <summary>
+            用户EF
+            </summary>
+        </member>
+        <member name="M:NoteSystem.Controllers.MyUserController.#ctor(NoteSystem.Contexts.MyUserContext)">
+            <summary>
+            注入用户EF
+            </summary>
+            <param name="userContext"></param>
+        </member>
+        <member name="M:NoteSystem.Controllers.MyUserController.LoginIndex(NoteSystem.Models.MyUser)">
+            <summary>
+            用户登陆
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:NoteSystem.Models.Enums.StatusEnum">
+            <summary>
+            请求状态
+            </summary>
+        </member>
+        <member name="F:NoteSystem.Models.Enums.StatusEnum.Success">
+            <summary>
+            请求成功
+            </summary>
+        </member>
+        <member name="F:NoteSystem.Models.Enums.StatusEnum.Failed">
+            <summary>
+            请求失败
+            </summary>
+        </member>
+        <member name="P:NoteSystem.Models.MyUser.UserGUID">
+            <summary>
+            用户表主键
+            </summary>
+        </member>
+        <member name="P:NoteSystem.Models.MyUser.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:NoteSystem.Models.MyUser.Sex">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:NoteSystem.Models.MyUser.Birthday">
+            <summary>
+            生日
+            </summary>
+        </member>
+        <member name="P:NoteSystem.Models.MyUser.Telephone">
+            <summary>
+            电话
+            </summary>
+        </member>
+        <member name="P:NoteSystem.Models.MyUser.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:NoteSystem.Models.MyUser.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:NoteSystem.Models.MyUser.IsAdmin">
+            <summary>
+            是否管理员
+            </summary>
+        </member>
+        <member name="P:NoteSystem.Models.MyUser.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="T:NoteSystem.Models.Result">
+            <summary>
+            封装请求数据
+            </summary>
+        </member>
+        <member name="P:NoteSystem.Models.Result.Status">
+            <summary>
+            请求状态
+            </summary>
+        </member>
+        <member name="P:NoteSystem.Models.Result.Data">
+            <summary>
+            数据
+            </summary>
+        </member>
+        <member name="M:NoteSystem.Models.Result.Success">
+            <summary>
+            默认请求成功
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NoteSystem.Models.Result.Success(System.Object)">
+            <summary>
+            请求成功并返回数据
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NoteSystem.Models.Result.Failed">
+            <summary>
+            请求失败
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NoteSystem.Models.Result.ResultSet(System.Enum,System.Object)">
+            <summary>
+            请求数据封装
+            </summary>
+            <param name="status"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
