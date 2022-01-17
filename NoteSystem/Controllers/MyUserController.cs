@@ -37,7 +37,7 @@ namespace NoteSystem.Controllers
         public string LoginIndex([FromBody] MyUser user)
         {
             MyUser myUser = null;
-            myUser = userContext.MyUser.Where(o => o.UserGUID == user.UserGUID && o.Password == user.Password).FirstOrDefault();
+            myUser = userContext.MyUser.Where(o => o.UserName == user.UserName && o.Password == user.Password).FirstOrDefault();
             if (myUser != null) {
                 return Result.Success(new MyUser()
                 {
