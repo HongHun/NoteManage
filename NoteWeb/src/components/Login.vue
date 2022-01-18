@@ -9,6 +9,7 @@
 
 <template>
 <div id="login">
+  <img alt="登录页面" src="../assets/NoteLog.png">
   <el-form
     :model="ruleForm2"
     status-icon
@@ -137,7 +138,7 @@ export default {
             console.log(res.data);
             console.log(res.data.Status);
             if (res.status === 200) {
-              me.$router.push("/HelloWorld");
+              me.$router.push("/Home");
             } else {
               alert("error submit2!");
             }
@@ -164,6 +165,7 @@ export default {
   color: #2c3e50;
   margin: 0 auto;
   width:600px;
+  margin-top: 60px;
 }
 
 </style>
