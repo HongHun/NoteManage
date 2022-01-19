@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2022-01-11 20:29:23
- * @LastEditTime: 2022-01-12 18:07:08
+ * @LastEditTime: 2022-01-19 12:49:05
  * @LastEditors: Please set LastEditors
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  * @FilePath: \NoteWeb\src\components\Login.vue
@@ -21,7 +21,7 @@
   <el-form-item label="账号" prop="account" >
       <el-input
         type="text"
-        v-model="ruleForm2.UserGUID"
+        v-model="ruleForm2.UserName"
         auto-complete="off"
       ></el-input>
     </el-form-item>
@@ -105,7 +105,7 @@ export default {
     };
     return {
       ruleForm2: {
-        UserGUID: "",
+        UserName: "",
         password: "",
         checkPass: "",
         age: ""
@@ -132,12 +132,12 @@ export default {
                 method: 'post',
                 url: '/MyUser/LoginIndex',
                 contentType: "application/json; charset=utf-8",
-                data: JSON.stringify(this.userInfo)
+                data: JSON.stringify(this.ruleForm2)
           }).then(function(res) {
             console.log(res);
             console.log(res.data);
             console.log(res.data.Status);
-            if (res.status === 200) {
+            if (res.data.Status === 200) {
               me.$router.push("/Home");
             } else {
               alert("error submit2!");

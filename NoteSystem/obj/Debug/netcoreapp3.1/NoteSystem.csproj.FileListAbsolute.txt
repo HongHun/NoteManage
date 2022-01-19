@@ -269,3 +269,7 @@ E:\GitHubProjs\NoteManage\NoteSystem\obj\Debug\netcoreapp3.1\NoteSystem.csproj.C
 E:\GitHubProjs\NoteManage\NoteSystem\obj\Debug\netcoreapp3.1\NoteSystem.dll
 E:\GitHubProjs\NoteManage\NoteSystem\obj\Debug\netcoreapp3.1\NoteSystem.pdb
 E:\GitHubProjs\NoteManage\NoteSystem\obj\Debug\netcoreapp3.1\NoteSystem.genruntimeconfig.cache
+D:\Net\NoteManage\NoteSystem\bin\Debug\netcoreapp3.1\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite.dll
+D:\Net\NoteManage\NoteSystem\bin\Debug\netcoreapp3.1\netcoreapp3.1\NetTopologySuite.dll
+D:\Net\NoteManage\NoteSystem\bin\Debug\netcoreapp3.1\netcoreapp3.1\NetTopologySuite.IO.SqlServerBytes.dll
+D:\Net\NoteManage\NoteSystem\obj\Debug\netcoreapp3.1\EFCoreSqlServerNetTopologySuite.cs
