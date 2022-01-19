@@ -52,7 +52,9 @@
             </el-submenu>
           </el-menu>
         </el-aside>
-        <el-main>内容</el-main>
+        <el-main>
+          <mavon-editor></mavon-editor>
+        </el-main>
       </el-container>
     </el-container>
   </div>
