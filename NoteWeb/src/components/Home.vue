@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2022-01-15 22:03:58
+ * @LastEditTime: 2022-01-20 13:09:14
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \NoteWeb\src\components\Home.vue
+-->
 <template>
   <div>
     <el-container>
@@ -53,16 +61,31 @@
           </el-menu>
         </el-aside>
         <el-main>
-          <mavon-editor></mavon-editor>
+          <div>
+            <mavon-editor v-model="content" ref="md" @change="change" style="min-height: 45vw;position:static" />
+          </div>
         </el-main>
       </el-container>
     </el-container>
   </div>
 </template>
 
+<script>
+import {
+    mavonEditor
+} from 'mavon-editor'
+import 'mavon-editor/dist/css/index.css'
+
+export default {
+  name: 'Home',
+  components: {
+    mavonEditor
+  }
+}
+</script>
+
 <style>
-.el-header,
-.el-footer {
+.el-header {
   background-color: #b3c0d1;
   color: #333;
   text-align: center;
@@ -72,15 +95,15 @@
 .el-aside {
   background-color: #d3dce6;
   color: #333;
-  text-align: center;
-  line-height: 800px;
+  text-align: left;
+  height: 880px;
 }
 
 .el-main {
   background-color: #e9eef3;
   color: #333;
   text-align: center;
-  line-height: 880px;
+  padding: 0px;
 }
 
 body > .el-container {
@@ -88,8 +111,7 @@ body > .el-container {
 }
 
 .el-menu{
-   background-color: #d3dce6;
-    color: #333;
-    text-align : left ;
+  background-color: #d3dce6;
+  color: #333;
 }
 </style>

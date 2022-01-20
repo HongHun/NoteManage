@@ -16,16 +16,13 @@
 import HelloWorld from './components/HelloWorld.vue'
 import Home from './components/Home.vue'
 import Login from './components/Login.vue'
-import MarkDown from "mavon-editor"
-import "mavon-editor/dist/css/index.css"
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
     Home,
-    Login,
-    MarkDown
+    Login
   }
 }
 </script>
