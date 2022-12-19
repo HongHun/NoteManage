@@ -8,7 +8,7 @@
  全局设置
 -->
 <script>
- const BASE_URL = 'https://localhost:5001/api/';
+ const BASE_URL = 'https://101.35.83.57:5001/api/';
  export default{
   BASE_URL
  }
