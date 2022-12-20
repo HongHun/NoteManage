@@ -42,7 +42,7 @@ router.beforeEach((to, from, next) => {
   // from从哪个路径来
   // next往下执行的回调
   // 在localStorage中获取token,后续改成从数据库获取是否有用户信息
-  let token = localStorage.getItem('userName');
+  let token = localStorage.getItem('loginInfo');
   if (to.meta.auth) {
     // 如果token存在直接跳转
     if (token) {
@@ -60,4 +60,5 @@ router.beforeEach((to, from, next) => {
     next();
   }
 })
+
 export default router;
