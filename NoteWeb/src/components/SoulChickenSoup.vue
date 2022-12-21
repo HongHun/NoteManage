@@ -25,7 +25,7 @@
           }).then(function(res) {
             console.log(res.data.Data);
             if (res.data.Status === 200) {
-              me.msg = res.data.Data;
+              me.msg = res.data.Data.Name;
             } else {
               alert("未获取到数据！");
             }

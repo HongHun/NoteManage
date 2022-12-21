@@ -31,8 +31,8 @@ namespace NoteSystem
         public void ConfigureServices(IServiceCollection services)
         {
             // ÅäÖÃEFÁ¬½Ó×Ö·û´®
-            services.AddDbContext<MyUserContext>(o => o.UseSqlServer(Configuration.GetConnectionString("MyUser")));
-            services.AddDbContext<ChickenSoupContext>(o => o.UseSqlServer(Configuration.GetConnectionString("ChickenSoup")));
+            services.AddDbContext<MyUserContext>(o => o.UseSqlServer(Configuration.GetConnectionString("WebSystem")));
+            services.AddDbContext<ChickenSoupContext>(o => o.UseSqlServer(Configuration.GetConnectionString("WebSystem")));
 
 
             services.AddControllers();

@@ -15,7 +15,7 @@
       <div class="avtar">
         <div class="pic"><img src="../assets/1.jpg" alt=""></div>
       </div>
-      <h1>Welcome back</h1>
+      <h1>NoteSystem</h1>
       <form action="#" class="form"  ref="ruleForm2" :model="ruleForm2" :rules="rules2">
           <div>
             <i class="fa fa-user-o"></i>
@@ -275,7 +275,7 @@ export default {
       }).then(function(res) {
         if (res.data.Status === 200) {
           localStorage.setItem('loginInfo', JSON.stringify(res.data));
-          me.$router.push({path: '/home'});
+          me.$router.push({path: '/ChickenSoup'});
         } else {
           alert("error submit2!");
         }

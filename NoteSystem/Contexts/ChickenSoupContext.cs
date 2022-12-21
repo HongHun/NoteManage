@@ -17,7 +17,7 @@ namespace NoteSystem.Contexts
         /// 自动注入连接字符串
         /// </summary>
         /// <param name="options"></param>
-        public ChickenSoupContext(DbContextOptions<MyUserContext> options) : base(options)
+        public ChickenSoupContext(DbContextOptions<ChickenSoupContext> options) : base(options)
         {
 
         }
