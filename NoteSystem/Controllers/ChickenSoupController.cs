@@ -1,5 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using NoteSystem.Contexts;
+using NoteSystem.Models;
+using NoteSystem.Utility;
+using System;
+using System.Linq;
 
 namespace NoteSystem.Controllers
 {
@@ -24,6 +28,19 @@ namespace NoteSystem.Controllers
             this.chickenSoupContext = chickenSoupContext;
         }
 
+        /// <summary>
+        /// 获取鸡汤
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public string GetSoup()
+        {
+            ChickenSoup chickenSoup = chickenSoupContext.ChickenSoup.OrderBy(x => Guid.NewGuid()).FirstOrDefault();
+            return Result.Success(new ChickenSoup()
+            {
+                Name = chickenSoup.Name
+            });
+        }
 
     }
 }
