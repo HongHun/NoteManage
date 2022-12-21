@@ -22,6 +22,7 @@ Vue.prototype.$ajax = axios;
 Vue.prototype.$qs = qs;
 // 数据类型修改为json
 axios.defaults.headers.post['Content-Type'] = 'application/json';
+
 // 使用路由
 Vue.use(VueRouter)
 
