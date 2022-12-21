@@ -5,6 +5,7 @@ using NoteSystem.Utility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Security.Principal;
 using System.Threading.Tasks;
 
@@ -38,8 +39,13 @@ namespace NoteSystem.Controllers
         [HttpPost]
         public string LoginIndex([FromBody] MyUser user)
         {
-            MyUser myUser = null;
-            myUser = userContext.MyUser.Where(o => o.UserName == user.UserName && o.Password == user.Password).FirstOrDefault();
+            //后端正则判断
+            VerifyData expression = new VerifyData();
+            // 用户名和密码
+            bool falg1 = expression.AccountAndPwd(user.UserName);
+            bool falg2 = expression.AccountAndPwd(user.Password);
+
+            MyUser myUser = userContext.MyUser.Where(o => o.UserName == user.UserName && o.Password == user.Password).FirstOrDefault();
             if (myUser != null) {
                 return Result.Success(new MyUser()
                 {

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace NoteSystem.Models
 {
+    /// <summary>
+    /// 用户信息表
+    /// </summary>
     public class MyUser
     {
         /// <summary>

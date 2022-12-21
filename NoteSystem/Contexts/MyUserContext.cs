@@ -7,6 +7,9 @@ using NoteSystem.Models;
 
 namespace NoteSystem.Contexts
 {
+    /// <summary>
+    /// 用户
+    /// </summary>
     public class MyUserContext:DbContext
     {
         /// <summary>

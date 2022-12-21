@@ -32,6 +32,8 @@ namespace NoteSystem
         {
             // ÅäÖÃEFÁ¬½Ó×Ö·û´®
             services.AddDbContext<MyUserContext>(o => o.UseSqlServer(Configuration.GetConnectionString("MyUser")));
+            services.AddDbContext<ChickenSoupContext>(o => o.UseSqlServer(Configuration.GetConnectionString("ChickenSoup")));
+
 
             services.AddControllers();
 
