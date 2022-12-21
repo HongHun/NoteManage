@@ -1,6 +1,7 @@
 <template>
     <div class="hello">
       <h1>{{ msg }}</h1>
+      <button  @click="getChickenSoup()">next</button>
     </div>
   </template>
 
@@ -11,15 +12,15 @@
     name: 'ChickenSoup',
     data () {
       return {
-        msg: '心灵鸡汤'
+        msg: '知道级处就是行！'
       }
     },
     methods: {
         getChickenSoup() {
             var me = this;
             axios({
-                method: 'post',
-                url: '/MyUser/LoginIndex',
+                method: 'get',
+                url: '/ChickenSoup/GetSoup',
                 contentType: "application/json; charset=utf-8"
           }).then(function(res) {
             console.log(res.data.Data);
