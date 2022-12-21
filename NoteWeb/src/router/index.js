@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Login from '@/components/Login.vue'
 import Home from '@/components/Home.vue'
+import ChickenSoup from '@/components/SoulChickenSoup.vue'
 
 Vue.use(Router)
 
@@ -30,6 +31,14 @@ const router = new Router({
       path: '/Home',
       name: 'Home',
       component: Home,
+      meta: {
+        auth: true
+      }
+    },
+    {
+      path: '/ChickenSoup',
+      name: 'ChickenSoup',
+      component: ChickenSoup,
       meta: {
         auth: true
       }
